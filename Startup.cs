@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Recipe_Api.Data;
 using Recipe_Api.Data.Interfaces;
 using Recipe_Api.Data.Repository;
-
+using Recipe_Api.Dblnfrastructure;
 
 namespace Recipe_Api
 {
@@ -23,23 +24,33 @@ namespace Recipe_Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddScoped<IRecipeStep, StepRepository>();
             const string connectionString = @"Data Source=LAPTOP-0NI53OGU\SQLEXPRESS;Initial Catalog=MySecondDB;Pooling=true;Integrated Security=SSPI";
-            services.AddDbContext<AppDbContent>(options => options.UseSqlServer(connectionString));
-            services.AddTransient<IRecipeOutputData, RecipeRepository>();
-            services.AddTransient<ITag, TagRepository>();
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddScoped<IUnitOfWork>(sp => sp.GetService<AppDbContext>());
 
-            services.AddMvc();
+            //services.AddTransient<IRecipeOutputData, RecipeRepository>();
+            //services.AddTransient<ITag, TagRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
-            app.UseStatusCodePages();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
+            app.UseRouting();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            //app.UseMvcWithDefaultRoute();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

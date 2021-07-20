@@ -1,11 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Recipe_Api.Arrays;
+using Recipe_Api.Data.Entities;
 using Recipe_Api.Data.Interfaces;
 
 
 namespace Recipe_Api.Controllers
 {
-    public class RecipeController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class RecipeController : ControllerBase
     {
+
         private readonly IRecipeStep _recipeStep;
 
         public RecipeController(IRecipeStep iRecipeStep)
@@ -13,10 +18,11 @@ namespace Recipe_Api.Controllers
             _recipeStep = iRecipeStep;
         }
 
-        public ViewResult List()
+        [HttpGet]
+
+        public StepArray[] Get()
         {
-            var steps = _recipeStep.AllSteps;
-            return View(steps);
+            return _recipeStep.AllSteps();
         }
     }
 }
