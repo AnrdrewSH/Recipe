@@ -1,5 +1,4 @@
-﻿
-namespace Recipe_Api.Dblnfrastructure
+﻿namespace Recipe_Api.Dblnfrastructure
 {
     public interface IUnitOfWork
     {

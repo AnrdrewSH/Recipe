@@ -12,14 +12,17 @@ namespace Recipe_Api.Data
 
         public void Commit()
         {
-            this.SaveChanges();
+            SaveChanges();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new EntityConfiguration());
+            modelBuilder.ApplyConfiguration(new StepConfiguration());
+            modelBuilder.ApplyConfiguration(new TagConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
         }
 
-        //public DbSet<Step> Step { get; set; }
+
+        //public DbSet<Step> Steps { get; set; }
         //public DbSet<Recipe> Recipe { get; set; }
         //public DbSet<Tag> Tag { get; set; }
 

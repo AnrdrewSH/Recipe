@@ -1,25 +1,37 @@
-﻿using Recipe_Api.Arrays;
+﻿using Recipe_Api.Data.Dto;
 using Recipe_Api.Data.Entities;
 using Recipe_Api.Data.Interfaces;
+using Recipe_Api.Dblnfrastructure;
 using System.Linq;
 
 namespace Recipe_Api.Data.Repository
 {
-    public class StepRepository : IRecipeStep
+    public class StepRepository : IStepRepository
     {
         private AppDbContext _context;
-        //private IUnitOfWork _unitOfWork;
-        public StepRepository(AppDbContext context/*, IUnitOfWork unitOfWork*/)
+        private IUnitOfWork _unitOfWork;
+        public StepRepository(AppDbContext context, IUnitOfWork unitOfWork)
         {
             _context = context;
-            //_unitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
 
         }
-        public StepArray[] AllSteps()
+        public StepDto[] GetAllSteps()
         {
             return _context.Set<Step>().ToList()
-                .ConvertAll(x => new StepArray { StepId = x.StepId, StepDescription = x.StepDescription })
+                .ConvertAll(x => new StepDto { StepId = x.StepId, StepDescription = x.StepDescription })
                 .ToArray();
+        }
+        public int Add(StepDto stepDto)
+        {
+            Step newStep = new Step
+            {
+                StepDescription = stepDto.StepDescription,
+            };
+            _context.Set<Step>().Add(newStep);
+            _unitOfWork.Commit();
+
+            return newStep.StepId;
         }
     }
 }

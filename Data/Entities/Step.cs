@@ -1,6 +1,4 @@
-﻿
-
-namespace Recipe_Api.Data.Entities
+﻿namespace Recipe_Api.Data.Entities
 {
     public class Step
     {

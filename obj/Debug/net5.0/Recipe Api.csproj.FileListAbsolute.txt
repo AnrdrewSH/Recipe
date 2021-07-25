@@ -8,7 +8,6 @@ C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\Recipe
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\ref\Recipe Api.dll
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\Recipe Api.pdb
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\Recipe Api.Views.dll
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\Recipe Api.Views.pdb
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.csproj.AssemblyReference.cache
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,24 +15,10 @@ C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.AssemblyInfo.cs
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.csproj.CoreCompileInputs.cache
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.RazorAssemblyInfo.cache
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.RazorAssemblyInfo.cs
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\staticwebassets\Recipe Api.StaticWebAssets.Manifest.cache
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\staticwebassets\Recipe Api.StaticWebAssets.xml
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\scopedcss\bundle\Recipe Api.styles.css
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.TagHelpers.input.cache
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.TagHelpers.output.cache
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.RazorCoreGenerate.cache
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.RazorTargetAssemblyInfo.cache
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.RazorTargetAssemblyInfo.cs
-C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.Views.pdb
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.csproj.CopyComplete
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\Recipe Api.dll
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\obj\Debug\net5.0\ref\Recipe Api.dll
@@ -68,3 +53,10 @@ C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\runtim
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\CulinaryRecipes\angular.json
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\CulinaryRecipes\package-lock.json
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\CulinaryRecipes\package.json
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\CulinaryRecipes\tsconfig.app.json
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\CulinaryRecipes\tsconfig.json
+C:\Users\Андрей\source\repos\Recipe Api\Recipe Api\bin\Debug\net5.0\CulinaryRecipes\tsconfig.spec.json
