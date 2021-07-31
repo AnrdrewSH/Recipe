@@ -12,7 +12,7 @@ namespace Recipe_Api.Data.DbInfrasructure
             builder.ToTable("Tags")
                 .HasKey(item => item.Id);
             builder.Property(item => item.Id)
-                .HasColumnName("TagId");
+                .HasColumnName("Id");
         }
     }
 }

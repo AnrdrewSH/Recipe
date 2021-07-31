@@ -4,14 +4,14 @@ using Recipe_Api.Data.Entities;
 
 namespace Recipe_Api.Data.DbInfrasructure
 {
-    public class ProductConfiguration : IEntityTypeConfiguration<Product>
+    public class IngredientItemConfiguration : IEntityTypeConfiguration<IngredientItem>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<IngredientItem> builder)
         {
-            builder.ToTable("Products")
+            builder.ToTable("IngredientItems")
                 .HasKey(item => item.Id);
             builder.Property(item => item.Id)
-                .HasColumnName("ProductId");
+                .HasColumnName("Id");
         }
     }
 }

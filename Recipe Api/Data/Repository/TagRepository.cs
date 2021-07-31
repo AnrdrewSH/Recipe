@@ -15,7 +15,7 @@ namespace Recipe_Api.Data.Repository
         public TagDto[] GetAllTags()
         {
             return _context.Set<Tag>().ToList()
-                .ConvertAll(x => new TagDto { TagId = x.TagId, TagName = x.TagName })
+                .ConvertAll(x => new TagDto { Id = x.Id, Name = x.Name, RecipeId = x.RecipeId })
                 .ToArray();
         }
     }

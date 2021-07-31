@@ -7,12 +7,12 @@ namespace Recipe_Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RecipeController : ControllerBase
+    public class StepController : ControllerBase
     {
 
         private readonly IStepRepository _repositoryStep;
 
-        public RecipeController(IStepRepository iRecipeStep)
+        public StepController(IStepRepository iRecipeStep)
         {
             _repositoryStep = iRecipeStep;
         }

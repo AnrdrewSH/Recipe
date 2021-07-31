@@ -19,19 +19,19 @@ namespace Recipe_Api.Data.Repository
         public StepDto[] GetAllSteps()
         {
             return _context.Set<Step>().ToList()
-                .ConvertAll(x => new StepDto { StepId = x.StepId, StepDescription = x.StepDescription })
+                .ConvertAll(x => new StepDto { Id = x.Id, Description = x.Description })
                 .ToArray();
         }
         public int Add(StepDto stepDto)
         {
             Step newStep = new Step
             {
-                StepDescription = stepDto.StepDescription,
+                Description = stepDto.Description,
             };
             _context.Set<Step>().Add(newStep);
             _unitOfWork.Commit();
 
-            return newStep.StepId;
+            return newStep.Id;
         }
     }
 }

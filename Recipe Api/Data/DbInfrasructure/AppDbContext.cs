@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Recipe_Api.Data.DbInfrasructure;
+using Recipe_Api.Data.Entities;
 using Recipe_Api.Dblnfrastructure;
 
 namespace Recipe_Api.Data
@@ -18,16 +19,8 @@ namespace Recipe_Api.Data
         {
             modelBuilder.ApplyConfiguration(new StepConfiguration());
             modelBuilder.ApplyConfiguration(new TagConfiguration());
-            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new IngredientItemConfiguration());
+            //modelBuilder.ApplyConfiguration(new RecipeConfiguration());
         }
-
-
-        //public DbSet<Step> Steps { get; set; }
-        //public DbSet<Recipe> Recipe { get; set; }
-        //public DbSet<Tag> Tag { get; set; }
-
-
-
-
     }
 }
