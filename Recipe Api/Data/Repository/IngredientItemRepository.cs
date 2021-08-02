@@ -22,7 +22,7 @@ namespace Recipe_Api.Data.Repository
         public IngredientItemDto[] GetAllIngredientItems()
         {
             return _context.Set<IngredientItem>().ToList()
-                .ConvertAll(x => new IngredientItemDto { Id = x.Id, Name = x.Name, Products = x.Products })
+                .ConvertAll(x => new IngredientItemDto { Id = x.Id, IngredientItemName = x.IngredientItemName, Products = x.Products, RecipeId = x.RecipeId })
                 .ToArray();
         }
         public int Add(IngredientItemDto IngredientItemDto)
@@ -30,7 +30,8 @@ namespace Recipe_Api.Data.Repository
             IngredientItem newIngredientItem = new IngredientItem
             {
                 Products = IngredientItemDto.Products,
-                Name = IngredientItemDto.Name,
+                IngredientItemName = IngredientItemDto.IngredientItemName,
+                RecipeId = IngredientItemDto.RecipeId = 1,
             };
             _context.Set<IngredientItem>().Add(newIngredientItem);
             _unitOfWork.Commit();

@@ -1,8 +1,9 @@
-﻿//namespace Recipe_Api.Data.Entities
-//{
-//    public class Product
-//    {
-//        public int Id { get; }
-//        public string Name { get; set; }
-//    }
-//}
+﻿namespace Recipe_Api.Data.Entities
+{
+    public class Product
+    {
+        public int ProductId { get; }
+        public string ProductName { get; set; }
+        
+    }
+}

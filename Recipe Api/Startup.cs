@@ -29,7 +29,6 @@ namespace Recipe_Api
             services.AddScoped<IStepRepository, StepRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<IIngredientItemRepository, IngredientItemRepository>();
-            services.AddScoped<IRecipeRepository, RecipeRepository>();
             const string connectionString = @"Data Source=LAPTOP-0NI53OGU\SQLEXPRESS;Initial Catalog=MySecondDB;Pooling=true;Integrated Security=SSPI";
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IUnitOfWork>(sp => sp.GetService<AppDbContext>());

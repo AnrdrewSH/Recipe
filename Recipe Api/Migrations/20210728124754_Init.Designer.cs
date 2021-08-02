@@ -9,7 +9,7 @@ using Recipe_Api.Data;
 namespace Recipe_Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210730104323_Init")]
+    [Migration("20210728124754_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,62 +20,50 @@ namespace Recipe_Api.Migrations
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Recipe_Api.Data.Entities.IngredientItem", b =>
+            modelBuilder.Entity("Recipe_Api.Data.Entities.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Id")
+                        .HasColumnName("ProductId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Products")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("ProductId");
 
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("IngredientItems");
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Recipe_Api.Data.Entities.Step", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("StepId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Id")
+                        .HasColumnName("StepId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description")
+                    b.Property<string>("StepDescription")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("StepId");
 
                     b.ToTable("Steps");
                 });
 
             modelBuilder.Entity("Recipe_Api.Data.Entities.Tag", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TagId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Id")
+                        .HasColumnName("TagId")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name")
+                    b.Property<string>("TagName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("TagId");
 
                     b.ToTable("Tags");
                 });

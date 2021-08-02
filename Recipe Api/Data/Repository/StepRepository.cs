@@ -14,24 +14,28 @@ namespace Recipe_Api.Data.Repository
         {
             _context = context;
             _unitOfWork = unitOfWork;
-
         }
         public StepDto[] GetAllSteps()
         {
             return _context.Set<Step>().ToList()
-                .ConvertAll(x => new StepDto { Id = x.Id, Description = x.Description })
+                .ConvertAll(x => new StepDto { Id = x.Id, StepDescription = x.StepDescription, RecipeId = x.RecipeId })
                 .ToArray();
         }
         public int Add(StepDto stepDto)
         {
             Step newStep = new Step
             {
-                Description = stepDto.Description,
+                StepDescription = stepDto.StepDescription,
+                RecipeId = stepDto.RecipeId = 1,
             };
             _context.Set<Step>().Add(newStep);
             _unitOfWork.Commit();
 
             return newStep.Id;
         }
+        //public int GetRecipeId()
+        //{
+        //    var GetRecipeId = _context.Database.ExecuteSqlCommand("SELECT MAX(Id) FROM dbo.Steps");
+        //}
     }
 }

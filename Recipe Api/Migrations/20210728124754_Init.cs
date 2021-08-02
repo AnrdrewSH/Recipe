@@ -7,53 +7,49 @@ namespace Recipe_Api.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "IngredientItems",
+                name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    ProductId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipeId = table.Column<int>(type: "int", nullable: false),
-                    Products = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ProductName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_IngredientItems", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.ProductId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Steps",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    StepId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                    StepDescription = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Steps", x => x.Id);
+                    table.PrimaryKey("PK_Steps", x => x.StepId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Tags",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    TagId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                    TagName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tags", x => x.Id);
+                    table.PrimaryKey("PK_Tags", x => x.TagId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "IngredientItems");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Steps");
